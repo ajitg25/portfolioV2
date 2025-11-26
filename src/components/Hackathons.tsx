@@ -175,6 +175,24 @@ const Hackathons = () => {
             link: '#',
             githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/securehack',
         },
+        {
+            name: 'Additional Hackathon Participations',
+            event: 'Multiple Hackathons',
+            position: 'Active Participant 🎯',
+            description:
+                'Actively participated in numerous other hackathons throughout college, gaining diverse experience in problem-solving, teamwork, and rapid prototyping. Each hackathon provided unique learning opportunities and exposure to different technologies and domains.',
+            technologies: ['Full Stack', 'Problem Solving', 'Team Collaboration', 'Rapid Prototyping'],
+            achievements: [
+                'Hack4Soc - Social impact hackathon',
+                'IC Hack - Innovation challenge',
+                'Second-Byte-Success - Tech competition',
+                'Silicon Rush - Silicon Valley themed hackathon',
+                'Hackverse - Multi-domain hackathon',
+                'And many more...',
+            ],
+            link: '#',
+            githubLink: 'https://github.com/ajitg25/all_hackathons_college_life',
+        },
     ];
 
     return (
