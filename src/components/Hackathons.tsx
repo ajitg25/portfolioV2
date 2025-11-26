@@ -145,6 +145,36 @@ const Hackathons = () => {
             link: '#',
             githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/Warpspeed',
         },
+        {
+            name: 'Multi-Feature Computer Vision System',
+            event: 'iNeuron Hackathon',
+            position: 'Second Prize 🥈',
+            description:
+                'Developed a comprehensive computer vision solution combining three key features: pothole detection for road safety, book reading assistance for visually impaired users, and general object detection. The integrated system addressed multiple real-world problems using advanced CV techniques, demonstrating versatility in applying computer vision to solve diverse challenges.',
+            technologies: ['Computer Vision', 'Object Detection', 'OCR', 'Python', 'OpenCV', 'Deep Learning'],
+            achievements: [
+                'Won Second Prize at iNeuron Hackathon',
+                'Built multi-feature CV system: pothole detection + book reading + object detection',
+                'Integrated three distinct computer vision applications into one solution',
+            ],
+            link: '#',
+            githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/ineuron-hackathon',
+        },
+        {
+            name: 'Malicious Link Detector',
+            event: 'SecureHack - Cybersecurity Hackathon',
+            position: 'Security Innovation 🔒',
+            description:
+                'Developed a proactive cybersecurity solution using a Chrome extension that detects malicious links before users click them. The extension intercepts link clicks, analyzes URLs using a custom-trained ML model (trained on open-source malicious link datasets), and only redirects users if the link is verified as safe. This prevents phishing attacks and malware infections by blocking threats at the source.',
+            technologies: ['Chrome Extension', 'Machine Learning', 'Cybersecurity', 'Python', 'Link Analysis', 'Threat Detection'],
+            achievements: [
+                'Built real-time malicious link detection system',
+                'Trained custom ML model using open-source security datasets',
+                'Created proactive security layer preventing phishing and malware attacks',
+            ],
+            link: '#',
+            githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/securehack',
+        },
     ];
 
     return (
