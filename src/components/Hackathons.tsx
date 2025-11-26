@@ -176,6 +176,26 @@ const Hackathons = () => {
             githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/securehack',
         },
         {
+            name: 'PharmaBot',
+            event: 'e-Yantra Robotics Competition - IIT Bombay',
+            position: 'Top 25 Nationally 🏅',
+            description:
+                'Competed in e-Yantra, IIT Bombay\'s prestigious national robotics competition. Developed an autonomous delivery robot using computer vision to recognize roads, start/end points, and dynamically route unique packages to their destinations. Tested and evaluated the complete system in CoppeliaSim simulation environment.',
+            technologies: ['OpenCV', 'Computer Vision', 'CoppeliaSim', 'Robotics', 'Python', 'Path Planning', 'Autonomous Systems'],
+            achievements: [
+                'Ranked in Top 25 nationally in e-Yantra robotics competition',
+                'Implemented OpenCV for road recognition and navigation',
+                'Built dynamic package delivery routing system',
+                'Utilized CoppeliaSim for simulation and testing',
+            ],
+            link: '#',
+            demoLinks: [
+                { label: 'Demo-1', url: 'https://youtu.be/tuV2Gui9nZ4' },
+                { label: 'Demo-2', url: 'https://youtu.be/oBnQIZAN21g' },
+            ],
+            githubLink: 'https://github.com/ajitg25/all_hackathons_college_life',
+        },
+        {
             name: 'Additional Hackathon Participations',
             event: 'Multiple Hackathons',
             position: 'Active Participant 🎯',
@@ -228,20 +248,62 @@ const Hackathons = () => {
                                             </svg>
                                         </a>
                                     )}
-                                    <a href={project.link} className="project-link" aria-label="View project">
-                                        <svg
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                            <polyline points="15 3 21 3 21 9" />
-                                            <line x1="10" y1="14" x2="21" y2="3" />
-                                        </svg>
-                                    </a>
+                                    {(project as any).demoLinks ? (
+                                        <div className="demo-dropdown">
+                                            <div className="project-link demo-trigger">
+                                                <svg
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                                </svg>
+                                            </div>
+                                            <div className="demo-menu">
+                                                {(project as any).demoLinks.map((demo: any, idx: number) => (
+                                                    <a
+                                                        key={idx}
+                                                        href={demo.url}
+                                                        className="demo-menu-item"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <svg
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            strokeWidth="2"
+                                                        >
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                        {demo.label}
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        project.link && project.link !== '#' && (
+                                            <a href={project.link} className="project-link" aria-label="View project">
+                                                <svg
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                                    <polyline points="15 3 21 3 21 9" />
+                                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                                </svg>
+                                            </a>
+                                        )
+                                    )}
                                 </div>
                             </div>
 
