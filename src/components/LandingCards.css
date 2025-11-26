@@ -1,65 +1,60 @@
-.landing-cards-3d {
-    min-height: 80vh;
+.landing-cards-simple {
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, rgba(102, 126, 234, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%);
-    overflow: hidden;
-    perspective: 1000px;
+    padding: 4rem 0;
 }
 
 .container {
     width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.scene {
-    width: 300px;
-    height: 400px;
-    position: relative;
-    perspective: 1000px;
-    margin-top: 4rem;
-    cursor: grab;
-}
-
-.scene:active {
-    cursor: grabbing;
-}
-
-.carousel {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out;
-    /* Smooth drag */
-}
-
-.carousel-card {
-    position: absolute;
-    width: 280px;
-    height: 380px;
-    left: 10px;
-    top: 10px;
+.section-header {
     text-align: center;
-    transition: all 0.3s ease;
-    /* 3D Positioning */
-    transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(350px);
-    backface-visibility: hidden;
-    /* Hide back of cards */
-    -webkit-backface-visibility: hidden;
+    margin-bottom: 4rem;
 }
 
-/* Make cards double-sided or just visible from front? 
-   Let's make them visible from both sides but maybe dim the back?
-   Actually, backface-visibility: hidden is safer for performance, 
-   but for a carousel we want to see them spinning.
-   Let's remove backface-visibility: hidden so we can see them as they rotate.
-*/
-.carousel-card {
-    backface-visibility: visible;
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    perspective: 1000px;
+}
+
+.simple-card {
+    width: 380px;
+    height: 550px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.simple-card:hover {
+    transform: translateY(-15px);
+    z-index: 10;
 }
 
 .card-content {
@@ -70,14 +65,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    user-select: none;
-    /* Prevent text selection while dragging */
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 /* Gradient border effect */
@@ -89,66 +86,111 @@
     right: 0;
     height: 6px;
     background: var(--card-gradient);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.simple-card:hover .card-content {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.simple-card:hover .card-content::before {
+    opacity: 1;
 }
 
 .card-emoji {
-    font-size: 4rem;
-    margin-bottom: var(--spacing-md);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    font-size: 6rem;
+    margin-bottom: var(--spacing-lg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.simple-card:hover .card-emoji {
+    transform: scale(1.1);
 }
 
 .card-question {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--text-primary);
     margin: 0 0 var(--spacing-sm) 0;
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .card-subtitle {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin: 0;
     font-weight: 500;
 }
 
 .card-arrow {
-    margin-top: var(--spacing-lg);
-    padding: 0.5rem 1rem;
+    margin-top: var(--spacing-xl);
+    padding: 0.75rem 1.5rem;
     background: var(--card-gradient);
     color: white;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    border-radius: 30px;
+    font-size: 1rem;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 0;
+    transform: translateY(20px);
     transition: all 0.3s ease;
 }
 
-.carousel-card:hover .card-arrow {
+.simple-card:hover .card-arrow {
     opacity: 1;
-    transform: scale(1.05);
+    transform: translateY(0);
 }
 
-.carousel-card:hover .card-content {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.8);
-}
+/* Responsive Breakpoints */
 
-@media (max-width: 768px) {
-    .scene {
-        width: 260px;
-        height: 340px;
+/* Large Laptops */
+@media (max-width: 1600px) {
+    .cards-grid {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2rem;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
-    .carousel-card {
-        width: 240px;
-        height: 320px;
-        /* Reduce radius for mobile */
-        transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(280px);
+    .cards-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .simple-card {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        /* Keep them big even on laptop scroll */
+        width: 350px;
+        height: 500px;
+    }
+
+    .card-arrow {
+        opacity: 1;
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Tablets/Mobile */
+@media (max-width: 768px) {
+    .simple-card {
+        width: 280px;
+        height: 400px;
     }
 
     .card-emoji {
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+
+    .card-question {
+        font-size: 1.2rem;
     }
 }
