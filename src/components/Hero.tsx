@@ -48,34 +48,35 @@ const Hero = () => {
                     </p>
 
                     <p className="hero-description animate-on-scroll">
-                        Electrical and Electronics Engineering student at BMS College of Engineering with expertise
-                        in full-stack development, data engineering, and machine learning. Experienced in building
+                        Have over 1.5 years of experience in backend development, AWS, data engineering, and machine learning. Experienced in building
                         production-grade applications and optimizing large-scale data pipelines.
                     </p>
 
-                    <div className="hero-buttons animate-on-scroll">
-                        <a href="#contact" className="btn btn-primary">
-                            Get In Touch
-                        </a>
-                        <a href="#hackathons" className="btn btn-outline">
-                            View Projects
-                        </a>
-                    </div>
+                    <div className="hero-actions animate-on-scroll">
+                        <div className="hero-buttons">
+                            <a href="#contact" className="btn btn-primary">
+                                Get In Touch
+                            </a>
+                            <a href="#hackathons" className="btn btn-outline">
+                                View Projects
+                            </a>
+                        </div>
 
-                    <div className="hero-stats animate-on-scroll">
-                        <div className="stat-item">
-                            <div className="stat-number">5+</div>
-                            <div className="stat-label">Hackathons</div>
-                        </div>
-                        <div className="stat-divider"></div>
-                        <div className="stat-item">
-                            <div className="stat-number">10+</div>
-                            <div className="stat-label">Projects</div>
-                        </div>
-                        <div className="stat-divider"></div>
-                        <div className="stat-item">
-                            <div className="stat-number">3</div>
-                            <div className="stat-label">Internships</div>
+                        <div className="hero-stats">
+                            <div className="stat-item">
+                                <div className="stat-number">10+</div>
+                                <div className="stat-label">Hackathons</div>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
+                                <div className="stat-number">10+</div>
+                                <div className="stat-label">Projects</div>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
+                                <div className="stat-number">5</div>
+                                <div className="stat-label">Internships</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,13 +109,6 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="scroll-indicator">
-                <div className="mouse">
-                    <div className="wheel"></div>
-                </div>
-                <p>Scroll to explore</p>
             </div>
         </section>
     );

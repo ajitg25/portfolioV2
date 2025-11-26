@@ -3,9 +3,10 @@ import './Navbar.css';
 
 interface NavbarProps {
     scrolled: boolean;
+    onNavigate: (section: string) => void;
 }
 
-const Navbar = ({ scrolled }: NavbarProps) => {
+const Navbar = ({ scrolled, onNavigate }: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -17,21 +18,19 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     }, [isOpen]);
 
     const navItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'Education', href: '#education' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#hackathons' },
-        { name: 'Experience', href: '#internships' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Home', id: 'home' },
+        { name: 'Education', id: 'education' },
+        { name: 'Skills', id: 'skills' },
+        { name: 'Projects', id: 'hackathons' },
+        { name: 'Experience', id: 'internships' },
+        { name: 'Contact', id: 'contact' },
     ];
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
         setIsOpen(false);
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+        onNavigate(id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -46,9 +45,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
                     {navItems.map((item) => (
                         <a
                             key={item.name}
-                            href={item.href}
+                            href={`#${item.id}`}
                             className="nav-link"
-                            onClick={(e) => handleNavClick(e, item.href)}
+                            onClick={(e) => handleNavClick(e, item.id)}
                         >
                             {item.name}
                         </a>

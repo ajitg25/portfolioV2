@@ -1,0 +1,154 @@
+.landing-cards-3d {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%);
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scene {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    margin-top: 4rem;
+    cursor: grab;
+}
+
+.scene:active {
+    cursor: grabbing;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    /* Smooth drag */
+}
+
+.carousel-card {
+    position: absolute;
+    width: 280px;
+    height: 380px;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* 3D Positioning */
+    transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(350px);
+    backface-visibility: hidden;
+    /* Hide back of cards */
+    -webkit-backface-visibility: hidden;
+}
+
+/* Make cards double-sided or just visible from front? 
+   Let's make them visible from both sides but maybe dim the back?
+   Actually, backface-visibility: hidden is safer for performance, 
+   but for a carousel we want to see them spinning.
+   Let's remove backface-visibility: hidden so we can see them as they rotate.
+*/
+.carousel-card {
+    backface-visibility: visible;
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    /* Prevent text selection while dragging */
+}
+
+/* Gradient border effect */
+.card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--card-gradient);
+}
+
+.card-emoji {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-question {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-sm) 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.card-arrow {
+    margin-top: var(--spacing-lg);
+    padding: 0.5rem 1rem;
+    background: var(--card-gradient);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-card:hover .card-arrow {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.carousel-card:hover .card-content {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .scene {
+        width: 260px;
+        height: 340px;
+    }
+
+    .carousel-card {
+        width: 240px;
+        height: 320px;
+        /* Reduce radius for mobile */
+        transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(280px);
+    }
+
+    .card-emoji {
+        font-size: 3rem;
+    }
+}
