@@ -67,8 +67,8 @@ This project is open source and available for personal use.
 ## 📧 Contact
 
 - **Email**: ajit@example.com
-- **GitHub**: [github.com/ajitgupta](https://github.com/ajitgupta)
-- **LinkedIn**: [linkedin.com/in/ajitgupta](https://linkedin.com/in/ajitgupta)
+- **GitHub**: [github.com/ajitg25](https://github.com/ajitg25)
+- **LinkedIn**: [linkedin.com/in/ajit-gupta25](https://www.linkedin.com/in/ajit-gupta25)
 
 ---
 
