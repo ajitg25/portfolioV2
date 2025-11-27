@@ -3,10 +3,9 @@ import './Navbar.css';
 
 interface NavbarProps {
     scrolled: boolean;
-    onNavigate: (section: string) => void;
 }
 
-const Navbar = ({ scrolled, onNavigate }: NavbarProps) => {
+const Navbar = ({ scrolled }: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -26,17 +25,14 @@ const Navbar = ({ scrolled, onNavigate }: NavbarProps) => {
         { name: 'Contact', id: 'contact' },
     ];
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
+    const handleNavClick = () => {
         setIsOpen(false);
-        onNavigate(id);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
-                <a href="#home" className="logo" onClick={(e) => handleNavClick(e, '#home')}>
+                <a href="#home" className="logo" onClick={handleNavClick}>
                     <span className="logo-text">Ajit Gupta</span>
                     <span className="logo-dot">.</span>
                 </a>
@@ -47,7 +43,7 @@ const Navbar = ({ scrolled, onNavigate }: NavbarProps) => {
                             key={item.name}
                             href={`#${item.id}`}
                             className="nav-link"
-                            onClick={(e) => handleNavClick(e, item.id)}
+                            onClick={handleNavClick}
                         >
                             {item.name}
                         </a>

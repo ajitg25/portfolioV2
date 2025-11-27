@@ -1,11 +1,7 @@
 import React from 'react';
 import './LandingCards.css';
 
-interface LandingCardsProps {
-    onNavigate: (section: string) => void;
-}
-
-const LandingCards = ({ onNavigate }: LandingCardsProps) => {
+const LandingCards = () => {
     const cards = [
         {
             emoji: '🎓',
@@ -49,15 +45,13 @@ const LandingCards = ({ onNavigate }: LandingCardsProps) => {
 
                 <div className="cards-grid">
                     {cards.map((card, index) => (
-                        <div
+                        <a
                             key={index}
+                            href={`#${card.id}`}
                             className="simple-card"
-                            onClick={() => {
-                                onNavigate(card.id);
-                                window.scrollTo({ top: 0, behavior: 'smooth' });
-                            }}
                             style={{
-                                '--card-gradient': card.gradient
+                                '--card-gradient': card.gradient,
+                                textDecoration: 'none'
                             } as React.CSSProperties}
                         >
                             <div className="card-content glass-card">
@@ -66,7 +60,7 @@ const LandingCards = ({ onNavigate }: LandingCardsProps) => {
                                 <p className="card-subtitle">{card.subtitle}</p>
                                 <div className="card-arrow">Click to View</div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
