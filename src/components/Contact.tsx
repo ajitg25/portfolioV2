@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
     const sectionRef = useRef<HTMLElement>(null);
+    const formRef = useRef<HTMLFormElement>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -38,20 +40,36 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+        const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
-            setTimeout(() => {
-                setSubmitStatus('idle');
-            }, 3000);
-        }, 1500);
+        console.log('Debug EmailJS:', {
+            serviceId: SERVICE_ID,
+            templateId: TEMPLATE_ID,
+            publicKey: PUBLIC_KEY,
+            formRef: formRef.current
+        });
+
+        if (formRef.current) {
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+                .then((result) => {
+                    console.log(result.text);
+                    setIsSubmitting(false);
+                    setSubmitStatus('success');
+                    setFormData({ name: '', email: '', message: '' });
+                    setTimeout(() => setSubmitStatus('idle'), 5000);
+                }, (error) => {
+                    console.log(error.text);
+                    setIsSubmitting(false);
+                    setSubmitStatus('error');
+                    setTimeout(() => setSubmitStatus('idle'), 5000);
+                });
+        }
     };
 
     const socialLinks = [
@@ -142,7 +160,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="contact-form glass-card animate-on-scroll" onSubmit={handleSubmit}>
+                    <form ref={formRef} className="contact-form glass-card animate-on-scroll" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input
@@ -196,6 +214,12 @@ const Contact = () => {
                         {submitStatus === 'success' && (
                             <div className="status-message success">
                                 ✓ Message sent successfully! I'll get back to you soon.
+                            </div>
+                        )}
+
+                        {submitStatus === 'error' && (
+                            <div className="status-message error" style={{ color: '#ff6b6b', marginTop: '1rem' }}>
+                                ⚠ Failed to send message. Please try again or email directly.
                             </div>
                         )}
                     </form>
