@@ -228,7 +228,7 @@ const Contact = () => {
 
             <footer className="footer">
                 <div className="container">
-                    <p>© 2024 Ajit Gupta. Built with React & TypeScript</p>
+                    <p>© 2025 Ajit Gupta. Built with Antigravity</p>
                     <p className="footer-tagline">Crafted with 💜 and lots of ☕</p>
                 </div>
             </footer>

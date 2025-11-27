@@ -11,26 +11,60 @@ import LandingCards from './components/LandingCards';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      setActiveSection(hash);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Set initial state based on current hash
+    handleHashChange();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'education':
+        return <Education />;
+      case 'skills':
+        return <Skills />;
+      case 'hackathons':
+        return <Hackathons />;
+      case 'internships':
+        return <Internships />;
+      case 'contact':
+        return <Contact />;
+      case 'home':
+      default:
+        return (
+          <>
+            <Hero />
+            <LandingCards />
+          </>
+        );
+    }
+  };
 
   return (
     <div className="app">
       <Navbar scrolled={scrolled} />
-      <Hero />
-      <LandingCards />
-      <Education />
-      <Skills />
-      <Hackathons />
-      <Internships />
-      <Contact />
+      {renderContent()}
+      {/* Show Contact section as footer on all pages except Contact page itself */}
+      {activeSection !== 'contact' && <Contact />}
     </div>
   );
 }
