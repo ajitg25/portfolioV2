@@ -165,7 +165,7 @@ const Hackathons = () => {
             link: '#',
             githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/BuilderCamp/customer-segmentation',
         },
-                {
+        {
             name: 'AYUSH Hospital Locator',
             event: 'Smart India Hackathon - AYUSH Ministry',
             position: 'College Level Selection 🎓',
@@ -211,7 +211,7 @@ const Hackathons = () => {
                     </p>
                 </div>
 
-                <div className="hackathons-grid grid grid-2">
+                <div className="hackathons-grid">
                     {hackathons.map((project, index) => (
                         <div
                             key={index}

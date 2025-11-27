@@ -4,6 +4,21 @@
 
 .hackathons-grid {
     margin-top: var(--spacing-2xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 1200px) {
+    .hackathons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hackathons-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .hackathon-card {
