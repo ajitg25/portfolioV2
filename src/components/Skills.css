@@ -53,14 +53,14 @@
 }
 
 .skill-category:nth-child(2) .skill-badge {
-    background: rgba(245, 87, 108, 0.15);
-    border-color: rgba(245, 87, 108, 0.3);
-    color: #ff9aa2;
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.3);
+    color: #d8b4fe;
 }
 
 .skill-category:nth-child(2) .skill-badge:hover {
-    background: rgba(245, 87, 108, 0.25);
-    box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+    background: rgba(168, 85, 247, 0.25);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
 }
 
 .skill-category:nth-child(3) .skill-badge {
