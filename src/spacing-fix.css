@@ -1,0 +1,4 @@
+/* Fix for navbar overlap issue */
+.section {
+    padding-top: 9rem !important;
+}
