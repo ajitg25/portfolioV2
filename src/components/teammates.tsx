@@ -9,7 +9,7 @@ const TeammatesCameraRoll = () => {
             name: "Akash Malasetty",
             role: "SDE @sprinklr",
             hackathon: "Teammate",
-            desc: "</>.",
+            desc: "Cloud Expert.",
             icon: <Globe size={24} />,
             color: "color-cyan",
             linkedin: "https://www.linkedin.com/in/akash-malasetty-862588a4"
@@ -19,7 +19,7 @@ const TeammatesCameraRoll = () => {
             name: "Chirag Manjeshwar",
             role: "Graduate Student @ASU",
             hackathon: "Teammate",
-            desc: "Fine-tuned the LLaMA model.",
+            desc: "Master of all",
             icon: <Cpu size={24} />,
             color: "color-purple",
             linkedin: "https://www.linkedin.com/in/chirumer"
@@ -29,7 +29,7 @@ const TeammatesCameraRoll = () => {
             name: "Ayush Sharma",
             role: "Data Scientist @Johnson & Johnson",
             hackathon: "Teammate",
-            desc: "Handled auth & smart contracts.",
+            desc: "AI/ML expert",
             icon: <Code2 size={24} />,
             color: "color-emerald",
             linkedin: "https://www.linkedin.com/in/ayush-sharma-2666a1196"
@@ -39,7 +39,7 @@ const TeammatesCameraRoll = () => {
             name: "Ninad Sonawane",
             role: "AI retial @Oracle",
             hackathon: "Teammate",
-            desc: "Created the entire design system.",
+            desc: "Blockchain Expert",
             icon: <Terminal size={24} />,
             color: "color-orange",
             linkedin: "https://www.linkedin.com/in/ninadsonawanework/"
@@ -49,7 +49,7 @@ const TeammatesCameraRoll = () => {
             name: "Pranshu Gupta",
             role: "SWE @Hinge Health",
             hackathon: "Teammate",
-            desc: "Scaled the API to 10k req/s.",
+            desc: "Full Stack Expert",
             icon: <Cpu size={24} />,
             color: "color-indigo",
             linkedin: "https://www.linkedin.com/in/pranshugupta01/"
@@ -59,7 +59,7 @@ const TeammatesCameraRoll = () => {
             name: "Nayan Agarwalla",
             role: "Engineering @Goldman Sachs",
             hackathon: "Teammate",
-            desc: "Scaled the API to 10k req/s.",
+            desc: "Frontend Expert",
             icon: <Cpu size={24} />,
             color: "color-indigo",
             linkedin: "https://www.linkedin.com/in/nayan-agarwalla-1369521b0/"
