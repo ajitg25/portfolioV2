@@ -169,12 +169,12 @@
     }
 }
 
-/* Teammate Card */
+/* Teammate Card - Increased size to 350x450 */
 .teammate-card-wrapper {
     position: relative;
     flex-shrink: 0;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     margin: 0 1.5rem;
     perspective: 1000px;
 }
@@ -432,7 +432,7 @@
 
 @media (max-width: 768px) {
     .teammates-main-title {
-        font-size: 2rem;
+        font-size: 30rem;
     }
 
     .teammates-subtitle {
@@ -440,7 +440,7 @@
     }
 
     .teammate-card-wrapper {
-        width: 280px;
-        height: 380px;
+        width: 320px;
+        height: 420px;
     }
 }

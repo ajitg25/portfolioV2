@@ -7,7 +7,7 @@ const TeammatesCameraRoll = () => {
         {
             id: 1,
             name: "Akash Malasetty",
-            role: "SDE",
+            role: "SDE @sprinklr",
             hackathon: "Teammate",
             desc: "</>.",
             icon: <Globe size={24} />,
@@ -17,7 +17,7 @@ const TeammatesCameraRoll = () => {
         {
             id: 2,
             name: "Chirag Manjeshwar",
-            role: "Graduate Student @ ASU",
+            role: "Graduate Student @ASU",
             hackathon: "Teammate",
             desc: "Fine-tuned the LLaMA model.",
             icon: <Cpu size={24} />,
@@ -27,7 +27,7 @@ const TeammatesCameraRoll = () => {
         {
             id: 3,
             name: "Ayush Sharma",
-            role: "Data Scientist @ Johnson & Johnson",
+            role: "Data Scientist @Johnson & Johnson",
             hackathon: "Teammate",
             desc: "Handled auth & smart contracts.",
             icon: <Code2 size={24} />,
@@ -36,23 +36,33 @@ const TeammatesCameraRoll = () => {
         },
         {
             id: 4,
-            name: "Mike Johnson",
-            role: "UI/UX Designer",
+            name: "Ninad Sonawane",
+            role: "AI retial @ORacle",
             hackathon: "Teammate",
             desc: "Created the entire design system.",
             icon: <Terminal size={24} />,
             color: "color-orange",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/ninadsonawanework/"
         },
         {
             id: 5,
-            name: "Priya Patel",
-            role: "Backend Dev",
+            name: "Pranshu Gupta",
+            role: "SWE @Hinge Health",
             hackathon: "Teammate",
             desc: "Scaled the API to 10k req/s.",
             icon: <Cpu size={24} />,
             color: "color-indigo",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/pranshugupta01/"
+        },
+        {
+            id: 6,
+            name: "Nayan Agarwalla",
+            role: "Engineering @Goldman Sachs",
+            hackathon: "Teammate",
+            desc: "Scaled the API to 10k req/s.",
+            icon: <Cpu size={24} />,
+            color: "color-indigo",
+            linkedin: "https://www.linkedin.com/in/nayan-agarwalla-1369521b0/"
         }
     ];
 
