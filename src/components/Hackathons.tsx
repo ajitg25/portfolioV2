@@ -205,7 +205,7 @@ const Hackathons = () => {
         <section id="hackathons" className="hackathons section" ref={sectionRef}>
             <div className="container">
                 <div className="section-header animate-on-scroll">
-                    <h2>Projects & Hackathons</h2>
+                    <h2>Hackathons Projects</h2>
                     <p className="section-description">
                         Innovative solutions and competitive achievements
                     </p>

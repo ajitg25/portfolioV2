@@ -20,7 +20,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         { name: 'Home', id: 'home' },
         { name: 'Education', id: 'education' },
         { name: 'Skills', id: 'skills' },
-        { name: 'Projects', id: 'hackathons' },
+        { name: 'Hackathons', id: 'hackathons' },
         { name: 'Experience', id: 'internships' },
         { name: 'Contact', id: 'contact' },
     ];
