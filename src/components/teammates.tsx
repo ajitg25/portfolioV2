@@ -151,7 +151,7 @@ const TeammateCard = ({ teammate }: { teammate: Teammate }) => {
                     <h3 className="card-teammate-name">
                         {teammate.name}
                     </h3>
-                    <p className="card-teammate-role">
+                    <p className={`card-teammate-role ${teammate.color}`}>
                         {teammate.role}
                     </p>
                     <p className="card-teammate-desc">

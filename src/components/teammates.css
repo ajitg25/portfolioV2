@@ -383,7 +383,7 @@
     transform: scaleX(1);
 }
 
-/* Color Variants */
+/* Color Variants for backgrounds */
 .color-cyan {
     background: linear-gradient(to bottom right, #06b6d4, #3b82f6);
 }
@@ -402,6 +402,32 @@
 
 .color-indigo {
     background: linear-gradient(to bottom right, #6366f1, #8b5cf6);
+}
+
+/* Role Text Color Override - no background, just colored text */
+.card-teammate-role.color-cyan {
+    color: #06b6d4;
+    background: none;
+}
+
+.card-teammate-role.color-purple {
+    color: #c084fc;
+    background: none;
+}
+
+.card-teammate-role.color-emerald {
+    color: #10b981;
+    background: none;
+}
+
+.card-teammate-role.color-orange {
+    color: #f97316;
+    background: none;
+}
+
+.card-teammate-role.color-indigo {
+    color: #8b5cf6;
+    background: none;
 }
 
 @media (max-width: 768px) {
