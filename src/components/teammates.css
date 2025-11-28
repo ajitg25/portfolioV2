@@ -316,9 +316,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 0.75rem;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #9ca3af;
 }
 
 .card-teammate-desc {

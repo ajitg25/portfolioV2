@@ -8,6 +8,7 @@ const TeammatesCameraRoll = () => {
             id: 1,
             name: "Akash Malasetty",
             role: "SDE",
+            hackathon: "Teammate",
             desc: "</>.",
             icon: <Globe size={24} />,
             color: "color-cyan",
@@ -17,6 +18,7 @@ const TeammatesCameraRoll = () => {
             id: 2,
             name: "Chirag Manjeshwar",
             role: "Graduate Student @ ASU",
+            hackathon: "Teammate",
             desc: "Fine-tuned the LLaMA model.",
             icon: <Cpu size={24} />,
             color: "color-purple",
@@ -24,17 +26,19 @@ const TeammatesCameraRoll = () => {
         },
         {
             id: 3,
-            name: "Jordan Smith",
-            role: "Full Stack",
+            name: "Ayush Sharma",
+            role: "Data Scientist @ Johnson & Johnson",
+            hackathon: "Teammate",
             desc: "Handled auth & smart contracts.",
             icon: <Code2 size={24} />,
             color: "color-emerald",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/ayush-sharma-2666a1196"
         },
         {
             id: 4,
             name: "Mike Johnson",
             role: "UI/UX Designer",
+            hackathon: "Teammate",
             desc: "Created the entire design system.",
             icon: <Terminal size={24} />,
             color: "color-orange",
@@ -44,6 +48,7 @@ const TeammatesCameraRoll = () => {
             id: 5,
             name: "Priya Patel",
             role: "Backend Dev",
+            hackathon: "Teammate",
             desc: "Scaled the API to 10k req/s.",
             icon: <Cpu size={24} />,
             color: "color-indigo",
@@ -146,7 +151,7 @@ const TeammateCard = ({ teammate }: { teammate: Teammate }) => {
                     <h3 className="card-teammate-name">
                         {teammate.name}
                     </h3>
-                    <p className={`card-teammate-role ${teammate.color}`}>
+                    <p className="card-teammate-role">
                         {teammate.role}
                     </p>
                     <p className="card-teammate-desc">
