@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './Hackathons.css';
+import TeammatesCameraRoll from './teammates';
 
 const Hackathons = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -327,6 +328,9 @@ const Hackathons = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Teammates Section */}
+            <TeammatesCameraRoll />
         </section>
     );
 };
