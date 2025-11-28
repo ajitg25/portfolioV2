@@ -37,7 +37,7 @@ const TeammatesCameraRoll = () => {
         {
             id: 4,
             name: "Ninad Sonawane",
-            role: "AI retial @ORacle",
+            role: "AI retial @Oracle",
             hackathon: "Teammate",
             desc: "Created the entire design system.",
             icon: <Terminal size={24} />,
