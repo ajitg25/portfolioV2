@@ -174,9 +174,6 @@ const TeammateCard = ({ teammate }: { teammate: Teammate }) => {
                     <a href={teammate.linkedin} className="card-social-link linkedin">
                         <Linkedin size={18} />
                     </a>
-                    <a href="#" className="card-social-link github">
-                        <Github size={18} />
-                    </a>
                 </div>
 
                 {/* Bottom shine effect */}
