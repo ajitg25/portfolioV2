@@ -31,6 +31,13 @@ const LandingCards = () => {
             id: 'skills',
             gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
         },
+        {
+            emoji: '🏃‍♂️',
+            question: 'Does he has a life or only tech?',
+            subtitle: 'Hobbies & Interests',
+            id: 'hobbies',
+            gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
+        },
     ];
 
     return (
