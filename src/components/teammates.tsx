@@ -1,4 +1,4 @@
-import { Linkedin, Github, Code2, Cpu, Globe, Terminal } from 'lucide-react';
+import { Linkedin, Code2, Cpu, Globe, Terminal } from 'lucide-react';
 import './teammates.css';
 
 const TeammatesCameraRoll = () => {
@@ -36,7 +36,7 @@ const TeammatesCameraRoll = () => {
         {
             id: 4,
             name: "Ninad Sonawane",
-            role: "AI retial @Oracle",
+            role: "AI retail @Oracle",
             hackathon: "Teammate",
             desc: "Blockchain Expert",
             icon: <Terminal size={24} />,
