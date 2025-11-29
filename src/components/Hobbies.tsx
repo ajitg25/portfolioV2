@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './Hobbies.css';
-import { PenTool, Droplet, Gamepad2, ChessPawn, Eye } from 'lucide-react';
+import { PenTool, Droplet, Gamepad2, ChessPawn, Eye, Mountain, Table } from 'lucide-react';
 import DigitalSketchbook from './DigitalSketchbook';
 
 const Hobbies = () => {
@@ -42,9 +42,13 @@ const Hobbies = () => {
             hasGallery: true
         },
         {
-            name: 'Swimming',
-            icon: <Droplet size={32} />,
-            desc: "Building endurance and maintaining flow state, essential for long coding sessions."
+            name: 'Chess',
+            icon: <ChessPawn size={32} />,
+            desc: "Pattern recognition and forward thinking, the ultimate exercise in logic and strategy.",
+            action: {
+                text: "Send a challenge",
+                url: "https://www.chess.com/member/ajitg131"
+            }
         },
         {
             name: 'Badminton',
@@ -56,14 +60,20 @@ const Hobbies = () => {
             }
         },
         {
-            name: 'Chess',
-            icon: <ChessPawn size={32} />,
-            desc: "Pattern recognition and forward thinking, the ultimate exercise in logic and strategy.",
-            action: {
-                text: "Send a challenge",
-                url: "https://www.chess.com/member/ajitg131"
-            }
+            name: 'Swimming',
+            icon: <Droplet size={32} />,
+            desc: "Building endurance and maintaining flow state, essential for long coding sessions."
         },
+        {
+            name: 'Trekking',
+            icon: <Mountain size={32} />,
+            desc: "Exploring the great outdoors, finding adventure and tranquility in nature.",
+        },
+        {
+            name: 'Foosball',
+            icon: <Table size={32} />,
+            desc: "Tabletop soccer for honing reflexes and strategic thinking, plus it's a blast!",
+        }
     ];
 
     return (
