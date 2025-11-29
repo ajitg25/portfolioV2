@@ -44,33 +44,45 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  position: relative;
+}
+@media (max-width: 768px) {
+  .sketchbook-content.large-modal {
+    width: 95vw;
+    max-width: 95vw;
+    min-width: 0;
+    height: 10;
+    min-height: 0;
+    max-height: 90vh;
+    padding: 16px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.3rem;
+    padding: 8px 14px;
+    z-index: 2;
+  }
 }
 .close-btn {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  background: #eee;
-  border: none;
+  top: 24px;
+  right: 24px;
   font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 2;
   display: flex;
   align-items: center;
-  z-index: 2;
-  padding: 6px 18px;
-  border-radius: 50px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s, color 0.2s;
-}
-.close-btn:hover, .close-btn:focus {
-  background: #e0e0e0;
-  color: #222;
+  border: 1px solid #eee;
 }
 .close-label {
   font-size: 1rem;
-  font-weight: 500;
+  margin-left: 6px;
   color: #333;
-  margin-left: 4px;
 }
 .sketchbook-gallery {
   width: 100%;
@@ -118,21 +130,4 @@
   margin-top: 12px;
   font-size: 1rem;
   color: #555;
-}
-@media (max-width: 768px) {
-  .close-btn {
-    position: fixed;
-    top: 24px;
-    right: 24px;
-    font-size: 2.5rem;
-    padding: 16px 24px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    z-index: 1001;
-  }
-  .close-label {
-    font-size: 1.2rem;
-    margin-left: 8px;
-  }
 }
