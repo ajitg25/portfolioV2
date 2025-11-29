@@ -54,9 +54,6 @@ const DigitalSketchbook: React.FC<DigitalSketchbookProps> = ({ onClose }) => {
           )}
           <button className="nav-btn" onClick={() => { setImgError(false); next(); }}>&gt;</button>
         </div>
-        <div className="sketchbook-caption">
-          {sketches[current]}
-        </div>
       </div>
     </div>
   );
