@@ -26,10 +26,10 @@
   align-items: center;
 }
 .sketchbook-content.large-modal {
-  width: 1200px;
-  height: 900px;
+  width: 900px;
+  height: 700px;
   min-width: 900px;
-  min-height: 600px;
+  min-height: 700px;
   max-width: 99vw;
   max-height: 99vh;
   padding: 48px;
@@ -38,15 +38,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .close-btn {
   position: absolute;
   top: 12px;
   right: 16px;
-  background: none;
+  background: #eee;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  padding: 6px 18px;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.close-btn:hover, .close-btn:focus {
+  background: #e0e0e0;
+  color: #222;
+}
+.close-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-left: 4px;
 }
 .sketchbook-gallery {
   width: 100%;
@@ -72,16 +96,16 @@
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 .sketch-img.large-img {
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   background: #fff;
 }
 .sketch-img-error {
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,4 +118,21 @@
   margin-top: 12px;
   font-size: 1rem;
   color: #555;
+}
+@media (max-width: 768px) {
+  .close-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    font-size: 2.5rem;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 1001;
+  }
+  .close-label {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
 }

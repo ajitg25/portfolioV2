@@ -39,7 +39,10 @@ const DigitalSketchbook: React.FC<DigitalSketchbookProps> = ({ onClose }) => {
     <div className="sketchbook-modal">
       <div className="sketchbook-overlay" onClick={onClose} />
       <div className="sketchbook-content large-modal">
-        <button className="close-btn" onClick={onClose}>&times;</button>
+        <button className="close-btn" onClick={onClose}>
+          <span style={{fontSize: '1.5rem', marginRight: '6px'}}>&times;</span>
+          <span className="close-label">Close</span>
+        </button>
         <div className="sketchbook-gallery">
           <button className="nav-btn" onClick={() => { setImgError(false); prev(); }}>&lt;</button>
           {imgError ? (
