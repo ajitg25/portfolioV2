@@ -50,18 +50,18 @@ const Hobbies = () => {
             name: 'Badminton',
             icon: <Gamepad2 size={32} />,
             desc: "Fast-paced strategic reactions and agility, keeping the mind sharp and active.",
-            link: {
-                url: "https://playo.co/profile/b43246c0-fbea-4ed0-9081-27b5fc95446d",
-                text: "Join in for the smashes!"
+            action: {
+                text: "Join in for the smashes!",
+                url: "https://playo.co/profile/b43246c0-fbea-4ed0-9081-27b5fc95446d"
             }
         },
         {
             name: 'Chess',
             icon: <ChessPawn size={32} />,
             desc: "Pattern recognition and forward thinking, the ultimate exercise in logic and strategy.",
-            link: {
-                url: "https://www.chess.com/member/ajitg131",
-                text: "Send a challenge"
+            action: {
+                text: "Send a challenge",
+                url: "https://www.chess.com/member/ajitg131"
             }
         },
     ];
@@ -85,15 +85,21 @@ const Hobbies = () => {
                             </div>
                             <h3 className="hobby-name">{hobby.name}</h3>
                             <p className="hobby-desc">{hobby.desc}</p>
-                            {hobby.link && (
-                                <a
-                                    href={hobby.link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hobby-link"
+                            {hobby.hasGallery && (
+                                <button
+                                    className="view-gallery-btn"
+                                    onClick={() => setIsGalleryOpen(true)}
                                 >
-                                    {hobby.link.text}
-                                </a>
+                                    <span>View Sketches</span>
+                                </button>
+                            )}
+                            {hobby.action && (
+                                <button
+                                    className="view-gallery-btn"
+                                    onClick={() => window.open(hobby.action.url, '_blank', 'noopener,noreferrer')}
+                                >
+                                    <span>{hobby.action.text}</span>
+                                </button>
                             )}
                         </div>
                     ))}
