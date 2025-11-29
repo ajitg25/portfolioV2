@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './Hobbies.css';
-import { PenTool, Droplet, Gamepad2, ChessPawn, Eye, Mountain, Table } from 'lucide-react';
+import { PenTool, Droplet, Gamepad2, ChessPawn, Mountain, Table } from 'lucide-react';
 import DigitalSketchbook from './DigitalSketchbook';
 
 const Hobbies = () => {

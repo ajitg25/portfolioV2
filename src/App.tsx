@@ -13,7 +13,6 @@ import Hobbies from './components/Hobbies';
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [showSketchbook, setShowSketchbook] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
