@@ -22,6 +22,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         { name: 'Skills', id: 'skills' },
         { name: 'Hackathons', id: 'hackathons' },
         { name: 'Experience', id: 'internships' },
+        { name: 'Hobbies', id: 'hobbies' },
         { name: 'Contact', id: 'contact' },
     ];
 

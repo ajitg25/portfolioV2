@@ -8,10 +8,12 @@ import Internships from './components/Internships';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import LandingCards from './components/LandingCards';
+import Hobbies from './components/Hobbies';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showSketchbook, setShowSketchbook] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +50,8 @@ function App() {
         return <Internships />;
       case 'contact':
         return <Contact />;
+      case 'hobbies':
+        return <Hobbies />;
       case 'home':
       default:
         return (
