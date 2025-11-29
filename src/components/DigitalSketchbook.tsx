@@ -46,7 +46,7 @@ const DigitalSketchbook: React.FC<DigitalSketchbookProps> = ({ onClose }) => {
             <div className="sketch-img-error">Image not found</div>
           ) : (
             <img
-              src={`/src/assets/sketch/${sketches[current]}`}
+              src={`/assets/sketch/${sketches[current]}`}
               alt={`Sketch ${current + 1}`}
               className="sketch-img large-img"
               onError={() => setImgError(true)}

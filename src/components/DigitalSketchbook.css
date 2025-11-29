@@ -26,10 +26,10 @@
   align-items: center;
 }
 .sketchbook-content.large-modal {
-  width: 1400px;
-  height: 1100px;
-  min-width: 1200px;
-  min-height: 900px;
+  width: 1200px;
+  height: 900px;
+  min-width: 900px;
+  min-height: 600px;
   max-width: 99vw;
   max-height: 99vh;
   padding: 48px;
