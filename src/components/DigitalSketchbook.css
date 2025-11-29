@@ -1,0 +1,83 @@
+.sketchbook-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sketchbook-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+}
+.sketchbook-content {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sketchbook-content.large-modal {
+  min-width: 480px;
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 32px;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.sketchbook-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn {
+  background: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 12px;
+}
+.sketch-img {
+  max-width: 60vw;
+  max-height: 60vh;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.sketch-img.large-img {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+.sketch-img-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+.sketchbook-caption {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #555;
+}

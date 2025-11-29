@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './Hobbies.css';
 import { PenTool, Droplet, Gamepad2, ChessPawn, Eye } from 'lucide-react';
+import DigitalSketchbook from './DigitalSketchbook';
 
 const Hobbies = () => {
     const sectionRef = useRef<HTMLElement>(null);
