@@ -222,7 +222,7 @@ const Contact = () => {
             <footer className="footer">
                 <div className="container">
                     <p>© 2025 Ajit Gupta. Built with Antigravity</p>
-                    <p className="footer-tagline">Crafted with 💜 and lots of ☕</p>
+                    <p className="footer-tagline">Crafted with 💜 and lots of tokens</p>
                 </div>
             </footer>
         </section>
