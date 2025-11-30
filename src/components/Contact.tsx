@@ -48,13 +48,6 @@ const Contact = () => {
         const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
         const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
-        console.log('Debug EmailJS:', {
-            serviceId: SERVICE_ID,
-            templateId: TEMPLATE_ID,
-            publicKey: PUBLIC_KEY,
-            formRef: formRef.current
-        });
-
         if (formRef.current) {
             emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
                 .then((result) => {
