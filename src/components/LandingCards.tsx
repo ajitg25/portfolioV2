@@ -25,6 +25,13 @@ const LandingCards = () => {
             gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
         },
         {
+            emoji: '🏗️',
+            question: 'What is he building?',
+            subtitle: 'Solo Projects',
+            id: 'building',
+            gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+        },
+        {
             emoji: '⚡',
             question: 'What can he actually do?',
             subtitle: 'Technical Skills',

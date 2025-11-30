@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import LandingCards from './components/LandingCards';
 import Hobbies from './components/Hobbies';
+import Building from './components/Building';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,6 +52,8 @@ function App() {
         return <Contact />;
       case 'hobbies':
         return <Hobbies />;
+      case 'building':
+        return <Building />;
       case 'home':
       default:
         return (
