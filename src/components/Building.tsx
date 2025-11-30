@@ -61,6 +61,23 @@ const Building = () => {
             logo: '📊',
         },
         {
+            role: 'Open Source Contributor',
+            name: 'Apache Airflow',
+            location: 'Remote',
+            period: '2024',
+            type: 'Open Source',
+            link: 'https://github.com/apache/airflow',
+            description:
+                'Active contributor to Apache Airflow, a platform created by the community to programmatically author, schedule and monitor workflows. Contributing to the open-source ecosystem to help improve tools used by developers worldwide.',
+            responsibilities: [
+                'Contributed code improvements and bug fixes to the core repository',
+                'Collaborated with the community to discuss features and improvements',
+                'Enhanced documentation to assist new users and developers',
+            ],
+            technologies: ['Python', 'Airflow', 'Git', 'Open Source', 'CI/CD'],
+            logo: '🍃',
+        },
+        {
             role: 'Technical Partner',
             name: 'Your Next Big Idea',
             location: 'Global',
@@ -134,7 +151,10 @@ const Building = () => {
                             {/* @ts-ignore */}
                             {project.link && (
                                 <div className="project-external-link">
-                                    <span className="link-label">Website:</span>
+                                    <span className="link-label">
+                                        {/* @ts-ignore */}
+                                        {project.link.includes('github.com') ? 'Github link:' : 'Website:'}
+                                    </span>
                                     <a
                                         // @ts-ignore
                                         href={project.link}
