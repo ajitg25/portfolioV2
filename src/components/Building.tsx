@@ -61,20 +61,22 @@ const Building = () => {
             logo: '📊',
         },
         {
-            role: 'Upcoming',
-            name: 'Project 3',
-            location: 'Remote',
-            period: 'In Progress',
-            type: 'Solo Project',
+            role: 'Technical Partner',
+            name: 'Your Next Big Idea',
+            location: 'Global',
+            period: 'Future',
+            type: 'Collaboration',
+            isCollaboration: true,
             description:
-                'Another exciting project is currently in the works. This initiative will focus on solving real-world problems using cutting-edge technologies. Stay tuned for updates!',
+                'Have a visionary idea but need the technical expertise to bring it to life? I am actively looking for partners to build impactful solutions with. Whether it\'s a SaaS product, an AI tool, or a mobile app, let\'s team up and turn your concept into reality.',
             responsibilities: [
-                'Identifying key pain points and defining the product roadmap',
-                'Architecting a scalable solution using modern tech stacks',
-                'Prototyping core features and validating assumptions',
+                'End-to-end technical implementation of your idea',
+                'Rapid MVP development to validate market fit',
+                'Scalable architecture design for long-term growth',
+                'Collaborative problem solving and product strategy',
             ],
-            technologies: ['TBD', 'Innovation', 'Development'],
-            logo: '🚧',
+            technologies: ['Your Vision', '+', 'My Engineering', '=', 'Innovation'],
+            logo: '🤝',
         },
     ];
 
@@ -92,7 +94,10 @@ const Building = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="building-card glass-card animate-on-scroll"
+                            className={`building-card glass-card animate-on-scroll ${
+                                // @ts-ignore
+                                project.isCollaboration ? 'collaboration-card' : ''
+                                }`}
                             style={{ animationDelay: `${index * 0.15}s` }}
                         >
                             <div className="building-header">
@@ -126,22 +131,28 @@ const Building = () => {
 
                             <p className="building-description">{project.description}</p>
 
+                            {/* @ts-ignore */}
                             {project.link && (
                                 <div className="project-external-link">
                                     <span className="link-label">Website:</span>
                                     <a
+                                        // @ts-ignore
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="website-link"
                                     >
+                                        {/* @ts-ignore */}
                                         {project.link}
                                     </a>
                                 </div>
                             )}
 
                             <div className="responsibilities-section">
-                                <h4 className="section-subtitle">Key Features</h4>
+                                <h4 className="section-subtitle">
+                                    {/* @ts-ignore */}
+                                    {project.isCollaboration ? 'What I Bring to the Table' : 'Key Features'}
+                                </h4>
                                 <ul className="responsibilities-list">
                                     {project.responsibilities.map((responsibility, idx) => (
                                         <li key={idx} className="responsibility-item">
@@ -163,7 +174,10 @@ const Building = () => {
                             </div>
 
                             <div className="technologies-section">
-                                <h4 className="section-subtitle">Technologies Used</h4>
+                                <h4 className="section-subtitle">
+                                    {/* @ts-ignore */}
+                                    {project.isCollaboration ? 'The Formula' : 'Technologies Used'}
+                                </h4>
                                 <div className="technologies-list">
                                     {project.technologies.map((tech, idx) => (
                                         <span key={idx} className="badge">
@@ -172,6 +186,15 @@ const Building = () => {
                                     ))}
                                 </div>
                             </div>
+
+                            {/* @ts-ignore */}
+                            {project.isCollaboration && (
+                                <div className="collaboration-action">
+                                    <a href="#contact" className="btn btn-primary pulse-button">
+                                        Let's Build It 🚀
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
