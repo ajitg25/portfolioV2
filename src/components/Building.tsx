@@ -190,7 +190,14 @@ const Building = () => {
                             {/* @ts-ignore */}
                             {project.isCollaboration && (
                                 <div className="collaboration-action">
-                                    <a href="#contact" className="btn btn-primary pulse-button">
+                                    <a
+                                        href="#contact"
+                                        className="btn btn-primary pulse-button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                                        }}
+                                    >
                                         Let's Build It 🚀
                                     </a>
                                 </div>
