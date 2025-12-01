@@ -75,6 +75,40 @@ const Freelance = () => {
             link: '#',
             githubLink: '#',
         },
+        {
+            name: 'SightShark User Registration System',
+            client: 'Prowiz (Remote)',
+            type: 'Cloud Infrastructure & Multi-Tenant SaaS 🏗️',
+            description:
+                'Architected and developed a comprehensive FastAPI-based multi-tenant SaaS backend for agency signup, user management, and automated infrastructure provisioning. The system handles OAuth authentication (Google/Facebook), JWT-based auth, and programmatically provisions per-agency GCP infrastructure using Terraform. Built complete IaC automation: agency signup triggers Terraform to create isolated VPCs, Cloud SQL instances, Artifact Registry, Cloud Run services, Secret Manager, and IAM configurations. Implemented Cloud Build CI/CD pipeline for containerized deployments to Cloud Run with Artifact Registry integration. Features include service account validation, email recovery flows, GCS uploads, Alembic migrations, and comprehensive logging.',
+            technologies: ['FastAPI', 'Terraform', 'GCP Cloud Run', 'Cloud SQL MySQL', 'OAuth 2.0', 'JWT', 'Cloud Build', 'Artifact Registry', 'Secret Manager', 'Alembic', 'Docker'],
+            achievements: [
+                'Built multi-tenant SaaS with programmatic per-agency infrastructure provisioning via Terraform',
+                'Automated complete GCP stack creation: VPC, Cloud SQL, Cloud Run, IAM, networking per agency',
+                'Implemented OAuth flows (Google/Facebook) with JWT authentication and password recovery',
+                'Created Cloud Build CI/CD pipeline: build → Artifact Registry → Cloud Run deployment',
+                'Designed terraform.py service for on-demand infra provisioning with state management in GCS',
+            ],
+            link: '#',
+            githubLink: '#',
+        },
+        {
+            name: 'Agency Portal Backend',
+            client: 'Prowiz (Remote)',
+            type: 'Microservices & Analytics 📊',
+            description:
+                'Built a scalable FastAPI microservice powering an agency admin portal for managing clients, credentials, report scheduling, and BI connector integrations. Architected modular REST API with SQLAlchemy ORM + MySQL (Cloud SQL), Alembic migrations, and comprehensive Google Cloud integrations (BigQuery for analytics, Cloud Storage for exports, Secret Manager for credentials). Implemented JWT-based authentication with OAuth social login (Google/Facebook via Authlib), rate limiting with slowapi. Deployed as containerized service to Cloud Run with Terraform-managed infrastructure (cloud_run.tf), Artifact Registry for images, and Cloud Build CI/CD pipeline. Features dynamic CORS, session middleware, and Cloud Run Jobs for long-running operations.',
+            technologies: ['FastAPI', 'SQLAlchemy', 'MySQL', 'BigQuery', 'Cloud Storage', 'Secret Manager', 'APScheduler', 'Authlib', 'Terraform', 'Cloud Run', 'Alembic', 'Docker'],
+            achievements: [
+                'Built modular FastAPI microservice with dozens of routers for agency/client/connector management',
+                'Integrated BigQuery analytics, Cloud Storage exports, and Secret Manager for secure credentials',
+                'Implemented JWT + OAuth social login (Authlib) with rate limiting and session management',
+                'Designed background job system: APScheduler + threaded queue + Cloud Run Jobs for heavy tasks',
+                'Automated deployment: Docker → Cloud Build → Artifact Registry → Cloud Run via Terraform',
+            ],
+            link: '#',
+            githubLink: '#',
+        },
         // Add more projects as needed
     ];
 
