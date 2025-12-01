@@ -1,0 +1,172 @@
+.freelance {
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.03) 0%, rgba(245, 87, 108, 0.03) 100%);
+}
+
+.freelance-grid {
+    margin-top: var(--spacing-2xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 1200px) {
+    .freelance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .freelance-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.freelance-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    height: 100%;
+    opacity: 0;
+    transition: all var(--transition-normal);
+}
+
+.freelance-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.freelance-card .project-badge {
+    padding: 0.5rem 1rem;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.freelance-card .project-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.freelance-card .project-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    color: var(--primary-light);
+    transition: all var(--transition-normal);
+}
+
+.freelance-card .project-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.freelance-card .github-link:hover {
+    background: #333;
+    border-color: #333;
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.freelance-card .project-name {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.freelance-card .project-client {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.freelance-card .project-client::before {
+    content: '👤';
+    font-size: 1rem;
+}
+
+.freelance-card .project-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.freelance-card .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.freelance-card .project-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.freelance-card .achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.freelance-card .achievement-item svg {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+/* Hover effects for cards */
+.freelance-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Different badge colors for variety */
+.freelance-card:nth-child(1) .project-badge {
+    background: var(--primary-gradient);
+}
+
+.freelance-card:nth-child(2) .project-badge {
+    background: var(--secondary-gradient);
+}
+
+.freelance-card:nth-child(3) .project-badge {
+    background: var(--accent-gradient);
+}
+
+.freelance-card:nth-child(4) .project-badge {
+    background: var(--success-gradient);
+}
+
+@media (max-width: 768px) {
+    .freelance-grid {
+        gap: var(--spacing-md);
+    }
+
+    .freelance-card .project-name {
+        font-size: 1.25rem;
+    }
+
+    .freelance-card .project-links {
+        flex-wrap: wrap;
+    }
+}

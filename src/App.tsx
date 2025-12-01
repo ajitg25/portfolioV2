@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Hackathons from './components/Hackathons';
+import Freelance from './components/Freelance';
 import Internships from './components/Internships';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
@@ -46,6 +47,8 @@ function App() {
         return <Skills />;
       case 'hackathons':
         return <Hackathons />;
+      case 'freelance':
+        return <Freelance />;
       case 'internships':
         return <Internships />;
       case 'contact':
