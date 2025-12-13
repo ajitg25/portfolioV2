@@ -53,7 +53,7 @@ const Hackathons = () => {
                 'Built tamper-proof medical records system using blockchain',
                 'Implemented OCR for automated data extraction from medical reports',
             ],
-            link: '#',
+            link: 'https://gknowme.onrender.com/',
             githubLink: 'https://github.com/ajitg25/all_hackathons_college_life/tree/main/KnowMyRecord',
         },
         {
