@@ -26,11 +26,7 @@ const Hero = () => {
 
     return (
         <section id="home" className="hero section" ref={heroRef}>
-            <div className="hero-background">
-                <div className="gradient-orb orb-1"></div>
-                <div className="gradient-orb orb-2"></div>
-                <div className="gradient-orb orb-3"></div>
-            </div>
+
 
             <div className="container hero-container">
                 <div className="hero-content">

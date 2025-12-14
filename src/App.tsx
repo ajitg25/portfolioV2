@@ -7,6 +7,7 @@ import Hackathons from './components/Hackathons';
 import Internships from './components/Internships';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import GridBackground from './components/GridBackground';
 import LandingCards from './components/LandingCards';
 import Hobbies from './components/Hobbies';
 import Building from './components/Building';
@@ -67,6 +68,7 @@ function App() {
 
   return (
     <div className="app">
+      <GridBackground />
       <Navbar scrolled={scrolled} />
       {renderContent()}
       {/* Show Contact section as footer on all pages except Contact page itself */}

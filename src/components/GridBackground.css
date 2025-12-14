@@ -1,0 +1,53 @@
+.grid-background-container {
+    position: fixed;
+    inset: 0;
+    background-color: #030712;
+    pointer-events: none;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.grid-mask {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, #030712 100%);
+}
+
+.floating-icon {
+    position: absolute;
+    color: rgba(30, 41, 59, 0.2);
+    /* slate-800/20 */
+    animation: bounce 1s infinite;
+}
+
+.floating-icon.top-right {
+    top: 5rem;
+    right: 5rem;
+}
+
+.floating-icon.bottom-left {
+    bottom: 5rem;
+    left: 5rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
