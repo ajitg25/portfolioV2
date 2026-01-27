@@ -1,0 +1,169 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ajit J Gupta} \\[30pt]
+
+\small
+\textcolor[HTML]{371e77}{{\faEnvelope}~ajitg131@gmail.com} $|$
+\textcolor[HTML]{371e77}{{\faMobile}~7984265117} \\[6pt]
+
+\textcolor[HTML]{371e77}{
+\underline{\raisebox{-0.05\height}{\faGithub}~\href{https://github.com/ajitg25}{GitHub}} $|$
+}
+\textcolor[HTML]{371e77}{
+\underline{\raisebox{-0.05\height}{\faLinkedin}~\href{https://linkedin.com/in/ajit-gupta25/}{LinkedIn}} $|$
+}
+\textcolor[HTML]{371e77}{
+\underline{\raisebox{-0.05\height}{\faCode}~\href{https://leetcode.com/u/ajitg131/}{LeetCode}}
+} \\
+
+\end{tabularx}
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\color[HTML]{1C033C} \textbf{BMS College Of Engineering, Bangalore} 
+& \color[HTML]{371e77} 2020 -- 2024 \\[-3pt]
+
+\color[HTML]{371e77} B.tech in EEE 
+& \color[HTML]{4B28A4} \textit{\textbf{CGPA: 9.2/10}} \\
+\end{tabularx}\\[3pt]
+
+%Experience
+\section{Work Experience}
+\vspace{10pt}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Hinge Health, Bangalore}} \hfill \color[HTML]{371e77} July 2024 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Data Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Designed and \textbf{optimized} \textbf{PySpark} pipelines to transform large-scale event data from raw to curated layers,
+        enabling real-time marketing automation via Iterable.
+        \item Replaced a 10-minute batch job (\textasciitilde\$600/month cost) with an \textbf{optimized} \textbf{PySpark} \textbf{streaming} solution,
+        \textbf{reducing} latency by 90\% and saving 60\% in monthly costs.
+        \item Built and owned a \textbf{Kafka}-based \textbf{streaming} service to consume, enrich, and publish high-volume user events for downstream consumers. 
+        \item Orchestrated batch and \textbf{streaming} pipelines using \textbf{Apache Airflow}, implementing \textbf{SLA} monitoring, retries, and dependency management
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{Hinge Health, Bangalore}} \hfill \color[HTML]{371e77} Aug 2023 - June 2024 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Development Engineer Intern}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed and maintained a \textbf{FastAPI}-based computer vision microservice that processed 10,000+
+        exercise videos weekly, enabling near real-time batch tracking across \textbf{AWS ECS} environments.
+        \item Integrated third-party \textbf{CV engine} (\textbf{wrnch}) for pose estimation and built a scalable parallel worker
+        architecture, \textbf{reducing} video processing time through \textbf{optimized} batch sizing.
+        \item Architected scalable \textbf{AWS} infrastructure using \textbf{CloudFormation}, supporting multi-version \textbf{CV engine}
+        deployment with \textbf{auto-scaling} \textbf{ECS} clusters handling up to 500 concurrent jobs during peak loads  
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Samsung, Bangalore} \hfill \color[HTML]{371e77} Dec 2022 - June 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{R\&D Intern}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built a \textbf{machine learning}–powered backend system to predict optimal WiFi access points, solving network handoff and
+        performance issues.
+        \item Exposed ML models via \textbf{Flask} REST APIs, enabling seamless integration with client applications.
+        \item Designed backend data pipelines to clean, transform, and store real-time WiFi scan data in \textbf{MongoDB} for training.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+
+% Projects
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{AI Agent Verse:} Implemented distributed multi-agent architecture using Google's A2A protocol, deploying 8+ independent
+        agent processes with domain-specific capabilities, enabling seamless inter-agent communication and
+        plug-and-play extensibility.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+
+\section{Skills}
+\vspace{10pt}
+\color[HTML]{1C033C}\textbf{Languages:} C++, Python, TypeScript, SQL, Terraform\\[3pt]
+\color[HTML]{1C033C}\textbf{Frameworks:} Nest.js, Flask, FastAPI, Pytest\\[3pt]
+\color[HTML]{1C033C}\textbf{Database:} MySQL, Postgres, MongoDB\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} AWS, Databricks, PySpark, Airflow, Kafka, Docker\\[3pt]
+
+% Leadership and Volunteering
+\section{Awards and Certificates}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Databricks Certified Data Engineer Associate Certification
+        \item Received Engineering award for my contributions in Hinge Health
+        \item Made open-source contributions to Apache Airflow with 4 pull requests successfully merged
+        \item Won national level Hack–A-Thon organized by PWskills (Physics Wallah) and others.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\end{document}
