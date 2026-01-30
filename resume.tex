@@ -1,0 +1,215 @@
+\documentclass[letterpaper,11pt]{article}
+
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+
+\urlstyle{same}
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+
+% Ensure that generate pdf is machine readable/ATS parsable
+%\pdfgentounicode=1
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+  \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt} 
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Ashish Kanoujia} \\ \vspace{1pt}
+    \small +91-9696338855
+    $|$ \href{mailto:}{ashishkanoujia24@gmail.com}
+    %$|$ \href{https://animesh-roy100.github.io/portfolio/}{\underline{portfolio}} 
+    $|$ \href{https://www.linkedin.com/in/ashish-kanoujia-2b4b1a1a4/}{\underline{linkedin}} 
+    $|$ \href{https://github.com/Halfsoul24}{\underline{github}}
+\end{center}
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+
+      \resumeSubheading
+      {Jio Platforms Limited}{June 2023 -- Present}
+      {Data Engineer}{Navi Mumbai, India}
+      \resumeItemListStart
+      % \resumeItem{Implemented a \textbf{Retrieval-Augmented Generation}(RAG)-based LLM solution to automate column description generation, enhancing data catalog accuracy, discoverability and usability.}
+        \resumeItem{Architected and implemented automated data observability frameworks using statistical modeling \textbf{(Z-Score)} to detect ingestion anomalies, reducing manual intervention by \textbf{40\%} and ensuring high data integrity.}
+            \resumeItem{Designed and implemented a \textbf{Data Mesh} architecture supporting \textbf{100+ data products} with automated \textbf{data governance}, domain ownership, and standardized \textbf{data contracts }.}
+\resumeItem{Spearheaded large-scale cloud data migrations and \textbf{ELT} pipelines, transitioning legacy systems to high-performance distributed computing environments(\textbf{Databricks}) while maintaining strict data quality standards.}
+                \resumeItem{Re-engineered \textbf{Change Data Capture (CDC)} workflows to optimize ingestion throughput, replacing less efficient components with optimized approaches resulting a\textbf{ 5x }increase in processing speed and reducing data latency.}
+        \resumeItem{Designed proactive performance monitoring and alerting systems to identify runtime \textbf{bottlenecks}, significantly improving system reliability and reducing operational overhead.}
+                \resumeItem{Designed and delivered \textbf{high-throughput }batch\textbf{ }and\textbf{ near-real-time ETL/ELT }data pipelines using \textbf{Medallion} \textbf{architecture}, supporting multiple downstream consumers with low-latency data availability.}
+        \resumeItem{Established automated data \textbf{lifecycle management} and governance policies via \textbf{CI/CD }pipelines to optimize storage costs and ensure compliance with data retention standards.}
+        \resumeItem{ Implemented \textbf{price optimization} use cases for \textbf{New Energy}, ingesting, cleaning, transforming via self healing pipelines and serving \textbf{10+ data products} with \textbf{Star Schema} to enable efficient pricing strategies and analytics.}
+        \resumeItem{Engineered secure, high-performance data delivery layers (\textbf{APIs}) to serve large-scale datasets (\textbf{time series data}) to business applications with ultra-low response times (\textbf{100–150ms}).}
+        % \resumeItem{Streamlined production incident response and root cause analysis (RCA), improving resolution times by 20\% and maximizing system uptime for global users.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology Allahabad}{Prayagraj, India}
+      {Bachelor of Technology - Electronics and Communication Engineering;  CGPA: 8.33}{July 2019 -- May 2023}
+  \resumeSubHeadingListEnd
+
+
+% %-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+          
+      \resumeProjectHeading
+          {\textbf{Capturing Anomaly via Z-Score} $|$ \emph{PySpark, SQL, Logic App, Synapse Analytics}}{} %$|$ \href{https://github.com/Animesh-roy100/api-gateway}{Link}}{}
+          \resumeItemListStart
+            \resumeItem{Architected Synapse pipeline leveraging \textbf{Z-Score} analysis to detect and notify stakeholders of abrupt deviations in record ingestion, reducing anomaly detection time by \textbf{70\%} and improving monitoring efficiency by \textbf{50\%}.}
+            \resumeItem{Developed a \textbf{Synapse ETL} monitoring pipeline to alert users of unusual runtime increases, improving issue detection speed by\textbf{ 60\%} and reducing downtime by \textbf{40\%}.}
+            \resumeItem{Integrated Synapse pipeline with \textbf{Logic App} to notify business via mail and read/write \textbf{Azure SQL} database where \textbf{Z-Score} is captured.}
+            \resumeItem{Optimized \textbf{Data Quality} processes, achieving significant business impact with time savings of up to \textbf{20\%}. }
+          \resumeItemListEnd
+
+
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, KQL, Bash/Shell scripting, C++  } \\
+     \textbf{Databases(SQL/NoSQL)}{: MySQL, MS SQL Server, Oracle, MongoDB, Redis, VectorDB (MilvusDB)} \\
+     \textbf{Framework \& Tools}{: Apache Spark(PySpark), Structured Streaming, Apache Kafka, Apache Airflow (Basic Proficiency), Kubernetes, Docker, Git} \\
+     \textbf{Cloud Platforms}{: Databricks, Azure Data Factory(ADF), Azure Synapse Analytics, Azure Data Lake Storage, Azure SQL, Fabric, PowerBI, AWS S3} \\
+       \textbf{Data Solutions}{: DataMesh, Data Lakes, Data Warehousing, Data Modeling (Star/Snowflake schema), Medallion Architecture, ETL, ELT, Data Governance (Unity Catalog, Azure Purview),  CI/CD Pipelines}
+    }}
+ \end{itemize}
+
+
+%------------------------------------------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item 
+    \textbf{Microsoft Certified}{: Azure Fundamentals \href{https://learn.microsoft.com/api/credentials/share/en-us/AshishKanoujia-1422/62087E366EAC30AB?sharingId=DF65B6CF14FEAC80}{\textbf{(AZ-900)}}.} \\
+    \textbf{Microsoft Certified}{: Azure Data Engineer Associate \href{https://learn.microsoft.com/api/credentials/share/en-us/AshishKanoujia-1422/6D389D669BB649B4?sharingId=DF65B6CF14FEAC80}{\textbf{(DP-203)}}.}\\
+    \textbf{Volunteer Educator, PRAYAAS}{: Found the opportunity to teach and mentor more than 200 underprivileged children, enhancing their academic performance.} \\
+    \textbf{Professional Excellence}{: Received an A + performance rating, an achievement achieved by the top 10\% of the company's employees.} }
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
+
+
