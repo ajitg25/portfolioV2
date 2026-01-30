@@ -1,0 +1,229 @@
+\documentclass[letterpaper,11pt]{article}
+
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FAANG FONT OPTIONS----------
+
+% ===============================
+% 🥈 Best LaTeX-native FAANG font
+% Source Sans Pro (ATS safe, recruiter friendly)
+% ===============================
+% \usepackage[default]{sourcesanspro}
+
+% ===============================
+% 🥉 Engineering-heavy FAANG look
+% Fira Sans
+% ===============================
+% \usepackage[sfdefault]{FiraSans}
+
+% ===============================
+% Corporate BigTech style
+% Helvetica / Arial-like
+% ===============================
+% \usepackage[scaled]{helvet}
+% \renewcommand\familydefault{\sfdefault}
+
+% ===============================
+% Clean modern FAANG alt
+% Roboto
+% ===============================
+% \usepackage[sfdefault]{roboto}
+
+% ===============================
+% Minimalist FAANG alt
+% Noto Sans
+% ===============================
+% \usepackage[sfdefault]{noto-sans}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+
+\urlstyle{same}
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+  \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt} 
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Ajit J Gupta} \\ \vspace{1pt}
+    \small +91-7984265117
+    $|$ \href{mailto:}{ajitg131@gmail.com}
+    $|$ \href{https://www.linkedin.com/in/ajit-gupta25/}{\underline{linkedin}} 
+    $|$ \href{https://github.com/ajitg25}{\underline{github}}
+    $|$ \href{https://leetcode.com/u/ajitg131/}{\underline{leetcode}}
+\end{center}
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+
+      \resumeSubheading
+      {Hinge Health}{July 2024 -- Present}
+      {Data Engineer}{Bangalore, India}
+      \resumeItemListStart
+    \resumeItem{Designed and optimized \textbf{PySpark ETL pipelines} to transform large-scale event data from raw to curated layers, enabling real-time marketing automation via \textbf{Iterable}.}
+    \resumeItem{Replaced a 10-minute batch job (\textbf{\$600/month} cost) with an optimized \textbf{PySpark streaming solution}, reducing latency by \textbf{90\%} and saving \textbf{60\%} in monthly costs.}
+    \resumeItem{Built and owned a \textbf{Kafka-based streaming service} to consume, enrich, and publish high-volume user events for downstream consumers.}
+    \resumeItem{Orchestrated batch and streaming pipelines using \textbf{Apache Airflow}, implementing \textbf{SLA monitoring}, retries, and dependency management.}
+\resumeItemListEnd
+
+      \resumeSubheading
+      {Hinge Health}{Aug 2023 -- June 2024}
+      {SDE Intern}{Bangalore, India}
+      \resumeItemListStart
+    \resumeItem{Developed and maintained a \textbf{FastAPI-based computer vision microservice} that processed \textbf{10,000+ exercise videos weekly}, enabling near real-time batch tracking across \textbf{AWS ECS} environments.}
+    \resumeItem{Integrated CV engine (\textbf{wrnch}) for pose estimation and built a \textbf{scalable parallel worker architecture}, reducing video processing time by \textbf{40\%} through optimized batch sizing.}
+\resumeItem{Architected scalable \textbf{AWS infrastructure} using \textbf{CloudFormation}, supporting multi-version CV engine deployment with \textbf{auto-scaling ECS clusters} handling \textbf{500+ concurrent jobs} during peak loads.}
+\resumeItemListEnd
+
+
+      \resumeSubheading
+      {Samsung}{Dec 2022 -- June 2023}
+      {R\&D Intern}{Bangalore, India}
+      \resumeItemListStart
+    \resumeItem{Built \textbf{ML-powered backend system} to predict optimal WiFi access points with \textbf{92\% accuracy}, reducing network handoff latency by \textbf{40\%} and improving connection stability.}
+    \resumeItem{Developed \textbf{Android application (Java)} to scan \textbf{50+ nearby WiFi networks} and push structured signal data to \textbf{MongoDB} in real-time, processing \textbf{100+ data points/minute}.}
+    \resumeItem{Designed backend data pipelines to clean, transform, and store \textbf{10K+ daily WiFi scan records} in MongoDB for ML model training and performance optimization.}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BMS College Of Engineering}{Bangalore, India}
+      {Bachelor of Technology - EEE;  CGPA: 9.2/10}{2020 -- 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+          
+      \resumeProjectHeading
+          {\textbf{AI Agent Verse} $|$ \emph{Python, LangChain, LangGraph, Google A2A}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented distributed multi-agent architecture using \textbf{Google's A2A protocol} with \textbf{8+ agents} across \textbf{5 data sources}, enabling real-time streaming and plug-and-play extensibility.}
+            \resumeItem{Enabled natural language querying across Databricks, Datadog, and Mixpanel, reducing manual data analysis by \textbf{70\%} and unifying \textbf{15+ API endpoints} into conversational AI-powered insights.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, Python, TypeScript, SQL, Terraform  } \\
+     \textbf{Databases}{: MySQL, Postgres, MongoDB} \\
+     \textbf{Framework }{: Nest.js, Flask , FastAPI, Pytest } \\
+      \textbf{Tools/Technologies}{: AWS, Databricks, PySpark, Airflow , Kafka, Docker, Structured Streaming, Kubernetes, DataDog, Metaplane}
+    }}
+ \end{itemize}
+
+
+%------------------------------------------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, itemsep=-2pt, parsep=0pt]
+    \small{
+    \item \textbf{Databricks Certified:} \href{https://credentials.databricks.com/ac267e1f-d7f1-4bb5-b3c5-099ac3d74de4#acc.I4vKEm2D}{Data Engineer Associate Certification}
+    \item Received \textbf{Engineering Excellence Award} for impactful contributions at \textbf{Hinge Health}.
+    \item Made \textbf{open-source contributions} to \textbf{Apache Airflow} with \textbf{4 pull requests} successfully merged.
+    \item Won \textbf{National-level Hackathon} organized by \textbf{PWskills (Physics Wallah)} among 500+ participants.
+    }
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
